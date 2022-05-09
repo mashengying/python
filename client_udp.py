@@ -1,4 +1,3 @@
-from email import message
 from socket import *
 serverName="localhost"
 serverPort=12000
@@ -7,4 +6,4 @@ message=input('input letters:')
 clientSocket.sendto(message.encode(),(serverName,serverPort))
 newMessage,serverAddress=clientSocket.recvfrom(2048)
 print(newMessage)
-print('serverAddress:'+serverAddress)
+print(serverAddress)
